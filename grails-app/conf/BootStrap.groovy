@@ -1,0 +1,20 @@
+package pc
+class BootStrap {
+
+    def init = { servletContext ->
+
+    	Motherboard m1 = new Motherboard(modelo: "Asus")
+    	m1.save(failOnError:true)
+
+    	Motherboard m2 = new Motherboard(modelo: "MSI")
+    	m2.save(failOnError:true)
+
+    	Conector c1 = new Conector( tipo: "DDR2", mother: m1)
+    	c1.save(failOnError:true)
+
+    	m1.addToConectores(c1)
+
+    }
+    def destroy = {
+    }
+}
