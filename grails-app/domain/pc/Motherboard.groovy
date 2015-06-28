@@ -8,4 +8,11 @@ class Motherboard {
 
     static constraints = {
     }
+
+    boolean tieneEsteConector(Componente componente){
+
+    	Iterator<Conector> it = conectores.Iterator()
+
+
+    }
 }
